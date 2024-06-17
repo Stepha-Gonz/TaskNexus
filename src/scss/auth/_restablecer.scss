@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.restablecer {
+  margin-top: 10rem;
+  .tasknexus {
+    @include m.textoDegradado(
+      rgba(39, 191, 219, 0.7791491596638656),
+      rgba(11, 47, 245, 0.6951155462184874),
+      32%,
+      56%
+    );
+  }
+
+  input[type="submit"] {
+    @include m.boton(v.$azul, v.$blanco);
+  }
+
+  .acciones {
+    a {
+      color: v.$azul;
+      font-weight: 600;
+    }
+  }
+}

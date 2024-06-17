@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.login {
+  margin-top: 10rem;
+  .tasknexus {
+    @include m.textoDegradado(
+      rgba(101, 48, 226, 0.989),
+      rgba(41, 174, 193, 0.8463760504201681),
+      32%,
+      56%
+    );
+  }
+
+  input[type="submit"] {
+    @include m.boton(v.$cyan, v.$blanco);
+  }
+
+  .acciones {
+    a {
+      color: v.$cyan;
+      font-weight: 600;
+    }
+  }
+}

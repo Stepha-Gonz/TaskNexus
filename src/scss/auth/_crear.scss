@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.crear {
+  margin-top: 10rem;
+  .tasknexus {
+    @include m.textoDegradado(
+      rgba(124, 58, 237, 0.8127626050420168),
+      rgba(67, 56, 202, 0.8379726890756303),
+      32%,
+      56%
+    );
+  }
+
+  input[type="submit"] {
+    @include m.boton(v.$morado, v.$blanco);
+  }
+
+  .acciones {
+    a {
+      color: v.$morado;
+      font-weight: 600;
+    }
+  }
+}
