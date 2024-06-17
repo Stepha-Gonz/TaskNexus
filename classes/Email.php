@@ -33,7 +33,7 @@ class Email{
         $mail->CharSet='UTF-8';
         $contenido="<html>";
         $contenido.="<p><strong>Hola ". $this->nombre ."</strong> Has Creado tu cuenta en TaskNexus, confirmala presionando el siguiente enlace</p>"  ;
-        $contenido.="<p>Presiona aqui: <a href='" . $_ENV[APP_URL] . "/confirmar?token=" . $this->token . "'>Confirma Tu cuenta</a> </p>";
+        $contenido.="<p>Presiona aqui: <a href='" . $_ENV['APP_URL'] . "/confirmar?token=" . $this->token . "'>Confirma Tu cuenta</a> </p>";
         $contenido.= "<p>Si tu no realizaste el proceso de crear la cuenta en TaskNexus puedes ignorar este mensaje</p>";
         $contenido.="</html>";
 
@@ -57,7 +57,7 @@ class Email{
         $mail->CharSet='UTF-8';
         $contenido="<html>";
         $contenido.="<p><strong>Hola ". $this->nombre ."</strong> ¿Quieres restablecer tu contraseña en TaskNexus?, Crea una nueva presionando el siguiente Boton</p>"  ;
-        $contenido.="<p>Presiona aqui: <a href='" . $_ENV[APP_URL] . "/restablecer?token=" . $this->token . "'>Restablece Tu contraseña</a> </p>";
+        $contenido.="<p>Presiona aqui: <a href='" . $_ENV['APP_URL'] . "/restablecer?token=" . $this->token . "'>Restablece Tu contraseña</a> </p>";
         $contenido.= "<p>Si tu no realizaste el proceso  puedes ignorar este mensaje</p>";
         $contenido.="</html>";
 
